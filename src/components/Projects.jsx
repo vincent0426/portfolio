@@ -1,87 +1,96 @@
-import covid_19 from "../images/covid-19.png";
-import flappy from "../images/flappy.png";
-import stock from "../images/stock.jpg";
-import nft_marketplace from "../images/nft.png";
-import offer from "../images/offer.png";
-import more from "../images/more.png";
+import { Card } from "./Card";
+import { CodeBracketIcon, LinkIcon } from "@heroicons/react/20/solid";
+import logoOfferLand from "../images/offerland.png";
+import logoFlappy from "../images/flappy.png";
+import logoCovid from "../images/covid.png";
+import logoNft from "../images/nft.png";
+import logoStock from "../images/stock.png";
 
-const files = [
+const projects = [
     {
-        title: "OfferLand",
-        size: "Golang, React",
-        source: offer,
-        href: "https://github.com/offerland-cc",
+        name: "OfferLand",
+        description:
+            "Create a platform for students who want to study abroad to find their dream school and get the best offer.",
+        link: { href: "https://offerland.cc", label: "offerland.cc" },
+        logo: logoOfferLand,
     },
     {
-        title: "COVID-19 Dashboard",
-        size: "python",
-        source: covid_19,
-        href: "https://github.com/Vincent0426/COVID-19-dashboard",
+        name: "Flappy Jenny",
+        description:
+            "Recreate the famous Flappy Bird game with C++ and SFML library.",
+        link: {
+            href: "https://github.com/vincent0426/Flappy-Jenny",
+            label: "vincent0426/Flappy-Jenny",
+        },
+        logo: logoFlappy,
     },
     {
-        title: "Flappy Jenny",
-        size: "C++",
-        source: flappy,
-        href: "https://github.com/Vincent0426/Flappy-Jenny",
+        name: "COVID-19 Dashboard",
+        description:
+            "Create a dashboard to visualize the COVID-19 data around the world.",
+        link: {
+            href: "https://github.com/vincent0426/COVID-19-dashboard",
+            label: "vincent0426/COVID-19-dashboard",
+        },
+        logo: logoCovid,
     },
     {
-        title: "Stock crawler",
-        size: "python",
-        source: stock,
-        href: "https://github.com/Vincent0426/stock",
+        name: "NFT Marketplace",
+        description:
+            "Create a marketplace for users to buy and sell NFTs on the Ethereum blockchain.",
+        link: {
+            href: "https://github.com/vincent0426/nft-marketplace",
+            label: "vincent0426/nft-marketplace",
+        },
+        logo: logoNft,
     },
     {
-        title: "NFT Marketplace",
-        size: "Solidity, React",
-        source: nft_marketplace,
-        href: "https://github.com/vincent0426/nft-marketplace",
-    },
-
-    {
-        title: "",
-        size: "",
-        source: more,
-        href: "https://github.com/vincent0426",
+        name: "Stock Analysis",
+        description:
+            "Create an application for client to analyze the stock market.",
+        link: {
+            href: "https://github.com/vincent0426/stock",
+            label: "vincent0426/stock",
+        },
+        logo: logoStock,
     },
 ];
 
 function Projects() {
     return (
-        <div className="min-h-screen bg-white max-w-5xl mx-auto">
-            <div className="flex flex-col pt-16 relative">
-                <h1 className="text-5xl text-gold text-center font-kalam">
-                    Projects
-                </h1>
-                <div className="my-16 p-10">
-                    <ul
-                        role="list"
-                        className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8"
-                    >
-                        {files.map((file) => (
-                            <li key={file.source} className="relative">
-                                <div className="rounded-lg bg-white focus-within:ring-2 focus-within:ring-gold focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-                                    <a
-                                        href={file.href}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <img
-                                            className="w-full h-48 object-cover rounded-t-lg"
-                                            src={file.source}
-                                            alt=""
-                                        />
-                                    </a>
-                                </div>
-                                <p className="text-center pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
-                                    {file.title}
-                                </p>
-                                <p className="text-center pointer-events-none block text-sm font-medium text-gray-500">
-                                    {file.size}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+        <div className="py-20 px-20 max-w-6xl mx-auto bg-white">
+            <div className="rounded-2xl border border-zinc-100 p-6">
+                <h2 className="flex text-xl font-semibold items-center text-gray-600">
+                    <CodeBracketIcon className="h-6 w-6 flex-none" />
+                    <span className="ml-3">Projects</span>
+                </h2>
+                <ul className="mt-12 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+                    {projects.map((project) => (
+                        <Card as="li" key={project.name}>
+                            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md">
+                                <img
+                                    src={project.logo}
+                                    alt=""
+                                    className="h-8 w-8"
+                                />
+                            </div>
+                            <h2 className="mt-6 text-base font-semibold text-zinc-800">
+                                <Card.Link href={project.link.href}>
+                                    {project.name}
+                                </Card.Link>
+                            </h2>
+                            <Card.Description>
+                                {project.description}
+                            </Card.Description>
+                            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500">
+                                <LinkIcon className="h-6 w-6 flex-none" />
+                                <span className="ml-2">
+                                    {project.link.label}
+                                </span>
+                            </p>
+                        </Card>
+                    ))}
+                </ul>
             </div>
         </div>
     );

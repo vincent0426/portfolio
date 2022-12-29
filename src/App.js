@@ -1,16 +1,14 @@
 import "./index.css";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Experience from "./components/Experience";
+import WorkingExperience from "./components/WorkingExperience";
 import Projects from "./components/Projects";
 
 function App() {
     return (
-        <div className="bg-gray-100">
-            {/* <Header /> */}
+        <div className="bg-gray-50">
             <Hero />
-            {/* <Experience /> */}
-            {/* <Projects /> */}
+            <WorkingExperience />
+            <Projects />
         </div>
     );
 }
