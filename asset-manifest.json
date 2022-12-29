@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.e33982ff.css",
+    "main.js": "/portfolio/static/js/main.a00303d9.js",
+    "static/media/image1.jpg": "/portfolio/static/media/image1.e0027a23345dc2b373ac.jpg",
+    "static/media/image3.jpg": "/portfolio/static/media/image3.b8c8f66833b3adfb88eb.jpg",
+    "static/media/image2.jpg": "/portfolio/static/media/image2.2c3d1181af4b2e954905.jpg",
+    "static/media/image4.jpg": "/portfolio/static/media/image4.64df6f405733aee1fe05.jpg",
+    "static/media/covid-19.png": "/portfolio/static/media/covid-19.4eaa3daf4ed02fd7223e.png",
+    "static/media/NTU.png": "/portfolio/static/media/NTU.eace15558840afb1030d.png",
+    "static/media/flappy.png": "/portfolio/static/media/flappy.46a7e0619d77ef05b9ea.png",
+    "static/media/nft.png": "/portfolio/static/media/nft.9b6cf634a8d0dc167c92.png",
+    "static/media/avatar.png": "/portfolio/static/media/avatar.b6ef18a03bb6f0b24e1c.png",
+    "static/media/stock.jpg": "/portfolio/static/media/stock.cdbd17b137e32612fea5.jpg",
+    "static/media/more.png": "/portfolio/static/media/more.807ed392460e7fb8166f.png",
+    "static/media/offer.png": "/portfolio/static/media/offer.979c9575f870084b8ddc.png",
+    "static/media/Amazon.png": "/portfolio/static/media/Amazon.84562da9fbace051033b.png",
+    "index.html": "/portfolio/index.html",
+    "main.e33982ff.css.map": "/portfolio/static/css/main.e33982ff.css.map",
+    "main.a00303d9.js.map": "/portfolio/static/js/main.a00303d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e33982ff.css",
+    "static/js/main.a00303d9.js"
+  ]
+}
